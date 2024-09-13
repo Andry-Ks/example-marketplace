@@ -1,6 +1,6 @@
 "use strict";
 const backendUrl = Cypress.env('backendUrl');
-const validEmail = 'test.user@example.com';
+const validEmail = 'test.user@example.com'; //To move data into an env file
 const invalidEmail = '.test.user@example.com';
 const validPassword = 'Password123.';
 const invalidPassword = '1234567';
@@ -99,10 +99,6 @@ describe ("Sign-up test", () => {
         cy.request({
             method: 'DELETE',
             url: `${backendUrl}/user/{userid}`,
-            body: {
-                id: id,
-           
-            },
           }).then((response) => {
             expect(response.status).to.eq(200)
         });

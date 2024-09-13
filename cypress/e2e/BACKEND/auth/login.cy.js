@@ -1,6 +1,6 @@
 "use strict";
 const backendUrl = Cypress.env('backendUrl');
-const validEmail = 'user@example.com';
+const validEmail = 'user@example.com'; //To move data into an env file
 const validPassword = '12345678A.';
 const wrongEmail = 'wrong.user@example.com';
 const wrongPassword = '12345678Abc.new';
@@ -65,7 +65,7 @@ describe ("Negative login test", () => {
 
     it ("Login with incorrect method", () => {
         cy.request({
-            method: 'GET',
+            method: 'PATCH',
             url: `${backendUrl}/api/auth/login/`,
             failOnStatusCode: false,
             body: {

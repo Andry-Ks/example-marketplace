@@ -1,6 +1,6 @@
 "use strict";
 const backendUrl = Cypress.env('backendUrl');
-const validEmail = 'user@example.com';
+const validEmail = 'user@example.com'; //To move data into an env file
 const validPassword = '12345678A.';
 const wrongEmail = 'wrong.user@example.com';
 const wrongPassword = '12345678Abc.new';
